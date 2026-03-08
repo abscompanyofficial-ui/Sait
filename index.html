@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рекламная страница</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .button-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .button-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border-color: #667eea;
+        }
+
+        .button-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .button-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .button-card p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Специальные стили для разных кнопок */
+        .button-card.special .btn {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+        }
+
+        .button-card.special:hover {
+            border-color: #f5576c;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #888;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .buttons-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Рекламная страница</h1>
+        <p class="subtitle">Нажмите на кнопку, чтобы перейти на нужный сайт</p>
+
+        <div class="buttons-grid">
+            <!-- Карточка с кнопкой для Google -->
+            <div class="button-card">
+                <span class="button-icon">🔍</span>
+                <h3>Google</h3>
+                <p>Крупнейшая поисковая система. Найди любую информацию в интернете.</p>
+                <a href="https://www.google.com" class="btn" target="_blank" rel="noopener noreferrer">Перейти на Google</a>
+            </div>
+
+            <!-- Карточка с кнопкой для YouTube -->
+            <div class="button-card">
+                <span class="button-icon">▶️</span>
+                <h3>YouTube</h3>
+                <p>Смотри видео, клипы, обучающие ролики и многое другое.</p>
+                <a href="https://www.youtube.com" class="btn" target="_blank" rel="noopener noreferrer">Перейти на YouTube</a>
+            </div>
+
+            <!-- Карточка с кнопкой для GitHub (специальный стиль) -->
+            <div class="button-card special">
+                <span class="button-icon">🐙</span>
+                <h3>GitHub</h3>
+                <p>Платформа для разработчиков. Храни код и работай над проектами.</p>
+                <a href="https://github.com" class="btn" target="_blank" rel="noopener noreferrer">Перейти на GitHub</a>
+            </div>
+
+            <!-- Карточка с кнопкой для Wikipedia -->
+            <div class="button-card">
+                <span class="button-icon">📚</span>
+                <h3>Wikipedia</h3>
+                <p>Свободная энциклопедия. Узнавай новое каждый день.</p>
+                <a href="https://wikipedia.org" class="btn" target="_blank" rel="noopener noreferrer">Перейти на Wikipedia</a>
+            </div>
+
+            <!-- Карточка с кнопкой для Amazon -->
+            <div class="button-card">
+                <span class="button-icon">🛒</span>
+                <h3>Amazon</h3>
+                <p>Крупнейший онлайн-ритейлер. Покупай товары со всего мира.</p>
+                <a href="https://www.amazon.com" class="btn" target="_blank" rel="noopener noreferrer">Перейти на Amazon</a>
+            </div>
+
+            <!-- Карточка с кнопкой для Twitter -->
+            <div class="button-card">
+                <span class="button-icon">🐦</span>
+                <h3>Twitter (X)</h3>
+                <p>Социальная сеть для коротких сообщений и новостей.</p>
+                <a href="https://twitter.com" class="btn" target="_blank" rel="noopener noreferrer">Перейти на Twitter</a>
+            </div>
+
+            <!-- Карточка с кнопкой для Instagram -->
+            <div class="button-card">
+                <span class="button-icon">📷</span>
+                <h3>Instagram</h3>
+                <p>Социальная сеть для обмена фотографиями и видео.</p>
+                <a href="https://www.instagram.com" class="btn" target="_blank" rel="noopener noreferrer">Перейти на Instagram</a>
+            </div>
+
+            <!-- Карточка с кнопкой для Reddit -->
+            <div class="button-card special">
+                <span class="button-icon">👽</span>
+                <h3>Reddit</h3>
+                <p>Тысячи сообществ, обсуждения и пользовательский контент.</p>
+                <a href="https://www.reddit.com" class="btn" target="_blank" rel="noopener noreferrer">Перейти на Reddit</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Нажимая на кнопки, вы переходите на соответствующие сайты.</p>
+            <p>© 2024 Рекламная страница | <a href="#">Политика конфиденциальности</a></p>
+        </div>
+    </div>
+</body>
+</html>
